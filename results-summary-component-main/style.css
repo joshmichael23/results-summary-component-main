@@ -1,52 +1,192 @@
+
 .main{
     box-sizing: border-box;
     
 }
 
+.container{
+    display:flex;
+    justify-content: center;
+    height:100%;
+
+    transform: translate(0%, 25%);
+}
 .main-content{
     font-size: 18px;
     font-family: "Hanken Grotesk";
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    align-self:center;
-    transform:translate(50%, 50%);
-    /* grid-template-columns: 1fr 1fr; */
     background-color: White;
     box-shadow: 0px 0px 25px 0px hsl(241, 100%, 89%);
     border-radius:12px;
+    width:40%;
+    height: auto;
+    display:flex;
+    /* display: flex;
+    flex-direction: row;
+    width: 40%;
+    height:auto;
+    justify-self: center;
+    align-self:center;
+    transform:translate(66%, 50%); */
+    /* grid-template-columns: 1fr 1fr; */
+
 }
 
 .result{
-    background-color: hsl(252, 100%, 67%);
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     color:hsl(0, 0%, 100%);
     border-radius:10px;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    width: 60%;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding-right: 2em;
+    
 }
 
+.result-title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
 .result-score{
-    background-color: hsl(241, 81%, 54%);
-    height:50%;
-    width: 50%;
+    height: 80%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+}
+
+.result-score-circle{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    
+    
     border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.result-score-circle > h1{
+    font-size: 4.5em;
+    margin:0;
+}
+
+.result-score-circle > h4{
+    margin:0;
 }
 
 .result section{
     display:flex;
     flex-direction: column;
-    margin-left: 25%;
-    margin-right: 25%;
-    align-items: center;
-    justify-items:center;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-content: center;
+    justify-content:center;
 }
 
-@media screen and (min-width: 200px) {
+.result-description{
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    grid-area: description;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.result-description > span{
+    text-align: center;
+}
+
+.summary{
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+    width: 60%;
+}
+
+.summary-contents{
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    display:grid;
+    color: gray;
+    grid-template-columns: 15% 55% 30%;
+    
+}
+
+.summary-contents.red{
+    background-color: hsl(0, 100%, 67%, .1);
+}
+
+
+.summary-contents.yellow{
+    background-color:hsl(39, 100%, 56%, .1)
+}
+
+.summary-contents.green{
+    background-color:hsl(166, 100%, 37%, .1)
+}
+
+.summary-contents.blue{
+    background-color:hsl(234, 85%, 45%, .1)
+}
+
+.summary-contents > .title{
+    font-weight: bold;
+}
+
+.summary-contents.red > .title{
+    color: hsl(0, 100%, 67%);
+}
+
+.summary-contents.yellow > .title{
+    color: hsl(39, 100%, 56%);
+}
+
+.summary-contents.green > .title{
+    color: hsl(166, 100%, 37%);
+}
+
+.summary-contents.blue > .title{
+    color: hsl(234, 85%, 45%);
+}
+
+.summary-contents > div > span.score {
+    font-weight: bold;
+    color: black;
+}
+
+.icons{
+    display:flex;
+    justify-self: center;
+}
+.btn-continue{
+    background-color:hsl(224, 30%, 27%);
+    border-radius: 33px;
+    border: none;
+    font-family: "Hanken Grotesk";
+    font-weight: bold;
+    font-size: 1em;
+    color:white;
+    padding: 20px 10px;
+}
+/* @media screen and (min-width: 200px) {
     .main-content{
         flex-direction: column;
         transform: translate(50%, 25%);
-        height:100vh;
+        height: auto;
     }
 
 
@@ -56,9 +196,10 @@
 @media screen and (min-width: 1000px) {
     .main-content{
         flex-direction: row;
-        height:100%;
+        transform: translate(100%, 50%);
+        height:auto;
     }
 
 
     
-}
+} */
