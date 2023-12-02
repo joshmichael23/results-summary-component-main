@@ -1,0 +1,64 @@
+.main{
+    box-sizing: border-box;
+    
+}
+
+.main-content{
+    font-size: 18px;
+    font-family: "Hanken Grotesk";
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-self:center;
+    transform:translate(50%, 50%);
+    /* grid-template-columns: 1fr 1fr; */
+    background-color: White;
+    box-shadow: 0px 0px 25px 0px hsl(241, 100%, 89%);
+    border-radius:12px;
+}
+
+.result{
+    background-color: hsl(252, 100%, 67%);
+    color:hsl(0, 0%, 100%);
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.result-score{
+    background-color: hsl(241, 81%, 54%);
+    height:50%;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.result section{
+    display:flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-right: 25%;
+    align-items: center;
+    justify-items:center;
+}
+
+@media screen and (min-width: 200px) {
+    .main-content{
+        flex-direction: column;
+        transform: translate(50%, 25%);
+        height:100vh;
+    }
+
+
+    
+}
+
+@media screen and (min-width: 1000px) {
+    .main-content{
+        flex-direction: row;
+        height:100%;
+    }
+
+
+    
+}
